@@ -7,8 +7,8 @@
 package collider
 
 import (
+	"collider/Godeps/_workspace/src/golang.org/x/net/websocket"
 	"crypto/tls"
-	"golang.org/x/net/websocket"
 	"encoding/json"
 	"errors"
 	"io"
@@ -48,11 +48,11 @@ func (c *Collider) Run(p int, useTls bool) {
 
 	pstr := ":" + strconv.Itoa(p)
 	if useTls {
-		config := &tls.Config {
+		config := &tls.Config{
 			MinVersion: tls.VersionTLS12,
 			// Only allow ciphers that support forward secrecy for iOS9 compatibility:
 			// https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/
-			CipherSuites: []uint16 {
+			CipherSuites: []uint16{
 				//tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
 				tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
 				tls.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
@@ -63,7 +63,7 @@ func (c *Collider) Run(p int, useTls bool) {
 			},
 			PreferServerCipherSuites: true,
 		}
-		server := &http.Server{ Addr: pstr, Handler: nil, TLSConfig: config }
+		server := &http.Server{Addr: pstr, Handler: nil, TLSConfig: config}
 
 		e = server.ListenAndServeTLS("/cert/cert.pem", "/cert/key.pem")
 	} else {

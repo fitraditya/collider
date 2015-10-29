@@ -6,7 +6,7 @@
 package collider
 
 import (
-	"collidertest"
+	"collider/Godeps/_workspace/src/collidertest"
 	"errors"
 	"log"
 	"reflect"

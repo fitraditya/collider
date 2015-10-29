@@ -6,7 +6,7 @@
 package collider
 
 import (
-	"code.google.com/p/go.net/websocket"
+	"collider/Godeps/_workspace/src/code.google.com/p/go.net/websocket"
 	"encoding/json"
 	"flag"
 	"fmt"

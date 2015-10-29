@@ -6,7 +6,7 @@
 package collider
 
 import (
-	"collidertest"
+	"collider/Godeps/_workspace/src/collidertest"
 	"testing"
 	"time"
 )
