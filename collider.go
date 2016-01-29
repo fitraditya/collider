@@ -7,7 +7,7 @@
 package collider
 
 import (
-	"collider/Godeps/_workspace/src/golang.org/x/net/websocket"
+	"golang.org/x/net/websocket"
 	"crypto/tls"
 	"encoding/json"
 	"errors"
@@ -15,7 +15,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"strconv"
 	"strings"
 	"time"
 )
