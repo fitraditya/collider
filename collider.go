@@ -7,10 +7,10 @@
 package collider
 
 import (
-	"golang.org/x/net/websocket"
 	"crypto/tls"
 	"encoding/json"
 	"errors"
+	"github.com/fitraditya/collider/Godeps/_workspace/src/golang.org/x/net/websocket"
 	"io"
 	"io/ioutil"
 	"log"
